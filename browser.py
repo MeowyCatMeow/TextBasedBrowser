@@ -41,7 +41,7 @@ class TextBasedBrowser:
             self.history_stack.pop()
             print(self.history_stack.pop())
         except IndexError:
-            print('No browser history')
+            print('Error: No browser history')
 
     def actions(self):
         while True:
