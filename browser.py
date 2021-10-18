@@ -22,7 +22,7 @@ class TextBasedBrowser:
         try:
             r = requests.get(link)
         except requests.exceptions.ConnectionError:
-            print('error: Incorrect URL')
+            print('Error: Incorrect URL')
             return
         else:
             soup = BeautifulSoup(r.content, 'html.parser')
@@ -57,7 +57,7 @@ class TextBasedBrowser:
             elif self.choice == 'exit':
                 exit()
             else:
-                print('Incorrect URL')
+                print('Error: Incorrect URL')
 
     def operate(self):
         if os.access(self.path, os.F_OK) is False:
